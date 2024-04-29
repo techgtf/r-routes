@@ -22,11 +22,26 @@ const { Home, About, PageNotFound, User, Github, GithubInfoLoader } = AppCompone
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='about' element={<About />} />
-      <Route path='*' element={<PageNotFound />} />
-      <Route path='user/:userid' element={<User />} />
+    <Route
+      path='/r-routes/'
+      element={<Layout />}
+    >
+      <Route
+        path=''
+        element={<Home />}
+      />
+      <Route
+        path='about'
+        element={<About />}
+      />
+      <Route
+        path='*'
+        element={<PageNotFound />}
+      />
+      <Route
+        path='user/:userid'
+        element={<User />}
+      />
       <Route
         loader={GithubInfoLoader}
         path='github'
